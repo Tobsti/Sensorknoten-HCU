@@ -18,3 +18,9 @@ wget https://raw.githubusercontent.com/Tobsti/Sensorknoten-HCU/main/sensorknoten
 
 chmod +x sensorknoten.py
 
+
+echo "@reboot ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
+
+crontab sensoknoten_crontask
+rm sensoknoten_crontask
+
