@@ -17,6 +17,9 @@ import adafruit_sht31d
 import adafruit_sht4x
 import piqmp6988 as QMP6988
 import adafruit_sgp30
+from dotenv import load_dotenv
+
+load_dotenv()
 
 i2c = board.I2C()
 i2c_0=busio.I2C(board.D1,board.D0,frequency=100000)
@@ -171,11 +174,11 @@ def lux_TSL():
 def connect_database():
 	try:
 		conn = mariadb.connect(
-			user="hcuadmin",
-			password="GeoMatik",
-			host="194.95.76.36",
-			port=3306,
-			database="sensorknoten",
+			user=DB_USER,
+			password=DB_PASSWORD,
+			host=DB_HOST,
+			port=DB_PORT,
+			database=DB_DATABASE,
 			connect_timeout = 5)
 
 		write_lcd((1,0),"DB:Yes",False)
