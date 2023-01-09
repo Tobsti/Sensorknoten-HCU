@@ -36,23 +36,6 @@ try:
 except:
 	print("Problem mit dem SGP30")
 
-"""
-try:
-	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	# connect() for UDP doesn't send packets
-	s.connect(('10.0.0.0', 0))
-
-	own_ip = s.getsockname()[0]
-
-
-	lcd = CharLCD('PCF8574',0x27)
-
-	lcd.clear()
-	lcd.cursor_pos = (0,0)
-	lcd.write_string(own_ip)
-except:
-	print("kein LCD")
-"""
 try:
 	lcd = CharLCD('PCF8574',0x27)
 except:
@@ -84,8 +67,6 @@ def own_ip():
 
 def co2_sgp30():
 	try:
-
-
 		eco2 = sgp30.eCO2
 		return eco2
 	except:
@@ -103,11 +84,15 @@ def zeitregelung():
 	timeserver = "2.de.pool.ntp.org"
 	response = os.system("ping -c 1 " + timeserver)
 	if response == 0:
-		print("Timeserver vorhanden")
-		os.system("sudo hwclock -w")
+		try:
+			os.system("sudo hwclock -w")
+		except:
+			print("Keine RTC vorhanden")
 	else:
-		print("keine Timeserver Uhrzeit von ")
-		os.system("sudo hwclock -s")
+		try:
+			os.system("sudo hwclock -s")
+		except:
+			print("Keine RTC vorhanden")
 
 def press_qmp6988():
 	try:
