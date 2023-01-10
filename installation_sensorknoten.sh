@@ -22,5 +22,5 @@ chmod +x sensorknoten.py
 echo "@reboot ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
 
 crontab sensoknoten_crontask
-rm sensoknoten_crontask
+sudo rm sensoknoten_crontask
 
