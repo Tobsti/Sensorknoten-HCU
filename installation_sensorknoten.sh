@@ -17,7 +17,7 @@ sudo apt-get install  i2c-tools python3-pip libmariadb3 libmariadb-dev -y
 
 
 
-sudo python -m pip install smbus mariadb adafruit-extended-bus adafruit-circuitpython-tsl2561 adafruit-circuitpython-bmp280 RPLCDS adafruit-circuitpython-sht31d adafruit-circuitpython-sht4x piqmp6988 adafruit-circuitpython-sgp30 python-dotenv
+sudo python -m pip install smbus mariadb adafruit-extended-bus adafruit-circuitpython-tsl2561 adafruit-circuitpython-bmp280 RPLCD adafruit-circuitpython-sht31d adafruit-circuitpython-sht4x piqmp6988 adafruit-circuitpython-sgp30 python-dotenv
 
 
 
