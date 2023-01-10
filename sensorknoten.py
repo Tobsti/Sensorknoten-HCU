@@ -106,7 +106,7 @@ def connect_database():
 			user=os.environ.get('DB_USER'),
 			password=os.environ.get('DB_PASSWORD'),
 			host=os.environ.get('DB_HOST'),
-			port=os.environ.get('DB_PORT'),
+			port=int(os.environ.get('DB_PORT')),
 			database=os.environ.get('DB_DATABASE'),
 			connect_timeout = 5)
 
