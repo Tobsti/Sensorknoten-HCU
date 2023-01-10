@@ -80,7 +80,7 @@ def zeitregelung():
 	"""Mit dieser Funktion kann das Raspberry Pi ohne Internetverbindung Daten mit einem Zeitstempel versehen.
 	Es wird nach einem Zeitserver gesucht, wenn dieser vorhanden ist wird seine Zeit auf die RTC sychronisiert (um zu langen Zeitdrift zu vermeiden)
 	Wenn der Zeitserver nicht erreichbar ist wird die Zeit der RTC auf den Raspberry Synchronisiert. 
-	Die Implementierung der RTC erfolgt in dem Betriebssystem, nicht in diesem Script. Siehe README.md  "https://github.com/Tobsti/Sensorknoten-HCU""""
+	Die Implementierung der RTC erfolgt in dem Betriebssystem, nicht in diesem Script. Siehe README.md  https://github.com/Tobsti/Sensorknoten-HCU """
 	timeserver = "2.de.pool.ntp.org"
 	response = os.system("ping -c 1 " + timeserver)
 	if response == 0:
