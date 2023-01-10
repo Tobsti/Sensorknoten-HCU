@@ -1,16 +1,5 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get upgrade
-
-sudo apt-get install  i2c-tools python3-pip libmariadb3 libmariadb-dev -y
-
-
-
-python -m pip install smbus mariadb board adafruit-extended-bus adafruit-circuitpython-tsl2561 adafruit-circuitpython-bmp280 RPLCDS adafruit-circuitpython-sht31d adafruit-circuitpython-sht4x piqmp6988 adafruit-circuitpython-sgp30 python-dotenv
-
-
-
 cd
 mkdir sensorknoten
 cd sensorknoten
@@ -18,6 +7,18 @@ cd sensorknoten
 wget https://raw.githubusercontent.com/Tobsti/Sensorknoten-HCU/main/sensorknoten.py
 
 chmod +x sensorknoten.py
+
+cd
+
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install  i2c-tools python3-pip libmariadb3 libmariadb-dev -y
+
+
+
+sudo python -m pip install smbus mariadb adafruit-extended-bus adafruit-circuitpython-tsl2561 adafruit-circuitpython-bmp280 RPLCDS adafruit-circuitpython-sht31d adafruit-circuitpython-sht4x piqmp6988 adafruit-circuitpython-sgp30 python-dotenv
+
 
 
 echo "@reboot sleep 15 && sudo ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
