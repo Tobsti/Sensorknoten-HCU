@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-sudo apt-get install python-smbus i2c-tools python3-pip libmariadbclient-dev -y
+sudo apt-get install mariadb-server smbus i2c-tools python3-pip libmariadbclient-dev -y
 
 
 
