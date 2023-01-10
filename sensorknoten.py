@@ -103,11 +103,11 @@ def connect_database():
 	Die Fehlermeldung wird per print() in die Konsole geschrieben"""
 	try:
 		conn = mariadb.connect(
-			user=DB_USER,
-			password=DB_PASSWORD,
-			host=DB_HOST,
-			port=DB_PORT,
-			database=DB_DATABASE,
+			user=os.environ.get('DB_USER'),
+			password=os.environ.get('DB_PASSWORD'),
+			host=os.environ.get('DB_HOST'),
+			port=os.environ.get('DB_PORT'),
+			database=os.environ.get('DB_DATABASE'),
 			connect_timeout = 5)
 
 		write_lcd((1,0),"DB:Yes",False)
