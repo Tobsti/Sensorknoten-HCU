@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ~
-sudo mkdir sensorknoten
+sudo mkdir /home/pi/sensorknoten
 cd sensorknoten
 sudo mkdir /mnt/usb
 
