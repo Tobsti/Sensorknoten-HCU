@@ -19,9 +19,9 @@ wget https://raw.githubusercontent.com/Tobsti/Sensorknoten-HCU/main/sensorknoten
 chmod +x sensorknoten.py
 
 
-echo "@reboot ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
+echo "@reboot sleep 15 && sudo ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
 
-crontab sensoknoten_crontask
+sudo crontab sensoknoten_crontask
 sudo rm sensoknoten_crontask
 
 echo "Bitte fügen Sie 'echo ds1307 0x68 > /sys/class/i2c-adapter/i2c-1/new_device' in /etc/rc.local vor exit 0 ein"
