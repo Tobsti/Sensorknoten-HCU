@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd
+cd ~
 sudo mkdir sensorknoten
 cd sensorknoten
 sudo mkdir /mnt/usb
@@ -10,7 +10,7 @@ wget https://raw.githubusercontent.com/Tobsti/Sensorknoten-HCU/main/.env
 
 chmod +x sensorknoten.py
 
-cd
+cd ~
 
 sudo apt-get update
 sudo apt-get upgrade -y
