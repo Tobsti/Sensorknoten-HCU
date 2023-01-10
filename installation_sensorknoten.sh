@@ -21,7 +21,7 @@ sudo systemctl enable pigpiod
 
 
 sudo python -m pip install smbus  adafruit-extended-bus adafruit-circuitpython-tsl2561 adafruit-circuitpython-bmp280 RPLCD adafruit-circuitpython-sht31d adafruit-circuitpython-sht4x piqmp6988 adafruit-circuitpython-sgp30 python-dotenv
-sudo python -m pip install mariadb==1.1.2
+sudo python -m pip install mariadb==1.0.11
 
 
 echo "@reboot sleep 15 && sudo ~/sensorknoten/sensorknoten.py >> ~/sensorknoten/protocoll.txt" >> sensoknoten_crontask
