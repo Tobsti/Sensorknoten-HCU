@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd ~
+cd /home/pi
 sudo mkdir /home/pi/sensorknoten
-cd sensorknoten
+cd /home/pi/sensorknoten
 sudo mkdir /mnt/usb
 
 wget https://raw.githubusercontent.com/Tobsti/Sensorknoten-HCU/main/sensorknoten.py
