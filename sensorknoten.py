@@ -261,10 +261,11 @@ if __name__ == '__main__':
 			}
 		# Um flexiebel zu sein sollen nicht genutzte Datensätze erstmal dem dataset_no_writng Dictionary gespeichert werden. Sollte der Sensorknoten 
 		# nicht mit einem der Sensoren Ausgestattet sein kann dieses Dictionary aus dem Code entfernt werden, um Zeit und rechneleistung zu sparen.
+		"""
 		dataset_no_writing = {
 			"tvoc_sgp30": tvoc_sgp30()
 		}
-
+		"""
 		# Seleep Timer, um die Daten zu erhalten und um ein ungefähres Delta_t einzustellen. Im Laufenden betrieb kann der Sleep auf minimum 2 Sekunden eingestellt werden. 
 		
 		time.sleep(5)
