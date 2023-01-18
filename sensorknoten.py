@@ -165,7 +165,7 @@ def press_qmp6988():
 		obj = QMP6988.PiQmp6988(config)
 		value = obj.read()
 		press = value['pressure']
-		return press
+		return press - 1.5931
 
 	except:
 		return "error"
@@ -175,7 +175,7 @@ def temp_sht40():
 	try:
 		sht = adafruit_sht4x.SHT4x(board.I2C())
 		temp = sht.temperature
-		return temp
+		return temp + (0.0173*temp-5.4717)
 	except:
 		return "error"
 
@@ -183,7 +183,7 @@ def hum_sht40():
 	try:
 		sht = adafruit_sht4x.SHT4x(board.I2C())
 		hum = sht.relative_humidity
-		return hum
+		return hum + (0.1724 * hum -3.2196)
 	except:
 		return "error"
 
@@ -192,7 +192,8 @@ def temp_sht30():
 	try:
 		sensor = adafruit_sht31d.SHT31D(i2c)
 		temp = sensor.temperature
-		return temp
+		return temp + (0.005*temp-0.0822)
+
 	except:
 		return "error"
 
@@ -200,7 +201,7 @@ def hum_sht30():
 	try:
 		sensor = adafruit_sht31d.SHT31D(i2c)
 		hum = sensor.relative_humidity
-		return hum
+		return hum + (0.0943 * hum - 4.5322)
 	except:
 		return "error"
 
@@ -208,14 +209,14 @@ def hum_sht30():
 def temp_BMP():
 	try:
 		temp = sensor_bmp.temperature
-		return temp
+		return temp + (-0.0113 * temp + 0.6431)
 	except:
 		return "error"
 
 def press_BMP():
 	try:
 		press = sensor_bmp.pressure
-		return press
+		return press -0.5336
 	except:
 		return "error"
 
