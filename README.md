@@ -5,7 +5,7 @@ Es dient zum einen der Dokumentation und der Weiternutzung des Codes und zum and
 
 # Stand des Systems
 
-Das System wurde zum Ende der Bachelorarbeit in der HCU installiert und schreibt dort die kalibirierten Sensormesswerte in die Postgres Datenbank
+Das System wurde zum Ende der Bachelorarbeit in der HCU installiert und schreibt dort die kalibirierten Sensormesswerte in die Postgres Datenbank.
 
 # Inhalt
 
