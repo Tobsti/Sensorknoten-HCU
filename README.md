@@ -5,8 +5,7 @@ Es dient zum einen der Dokumentation und der Weiternutzung des Codes und zum and
 
 # Stand des Systems
 
-Um das System final zu nutzen fehlen noch 2 Hardwareanpassungen an dem Sensorknoten, die im Laufe der 7. KW getroffen werden. 
-Eine finale Installation soll dann in der 8. KW erfolgen.
+Das System wurde zum Ende der Bachelorarbeit in der HCU installiert und schreibt dort die kalibirierten Sensormesswerte in die Postgres Datenbank
 
 # Inhalt
 
